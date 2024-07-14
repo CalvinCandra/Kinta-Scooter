@@ -1,0 +1,664 @@
+<!doctype html>
+<html  class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- link flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- link google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- fontawsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- title -->
+  <title>KintaScooter</title>
+
+  <!-- favicon -->
+   <link rel="shortcut icon" href="./assets/img/favivon/logo.png" type="image/x-icon">
+</head>
+
+<body style="font-family: 'Poppins';" class="bg-[#f5f6fa] relative overflow-x-hidden">
+
+  <!-- navbar -->
+  <nav class="bg-white fixed w-full z-50 top-0 start-0 border-b border-gray-200 " data-aos="zoom-in-down">
+    <div class="max-w-screen-xl lg:mx-16 flex flex-wrap items-center justify-between mx-auto p-4">
+
+      <!-- logo -->
+      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./assets/img/favivon/logo.png" class="h-8" alt="Flowbite Logo">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap"><span class="font-bold text-[#597445]">KINTA</span><span class="font-medium text-orange-300">Scooter</span></span>
+      </div>
+
+      <!-- bagian kanan -->
+      <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
+          <img src="./assets/img/landing/boring.jpeg" alt="" class="w-7 h-7 rounded-full me-3">
+          Draviinn
+        </button>
+        <!-- Dropdown -->
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow" id="language-dropdown-menu">
+          <ul class="py-2 font-medium" role="none">
+            <li>
+              <a href="dashboard.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                <div class="inline-flex items-center">
+                  Check My Scooter
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                <div class="inline-flex items-center">
+                  Logout
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-language" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+
+      <!-- menu -->
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <li>
+            <a href="#home" class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-[#597445] md:p-0 hover:scale-[0.95] hover:underline ease-in-out transition-all" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#597445] md:p-0 hover:scale-[0.95] hover:underline ease-in-out transition-all">About</a>
+          </li>
+          <li>
+            <a href="#location" class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#597445] md:p-0 hover:scale-[0.95] hover:underline ease-in-out transition-all">Location</a>
+          </li>
+          <li>
+            <a href="#product" class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#597445] md:p-0 hover:scale-[0.95] hover:underline ease-in-out transition-all">Scooter</a>
+          </li>
+          <li>
+            <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#597445] md:p-0 hover:scale-[0.95] hover:underline  ease-in-out transition-all">Contact</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- hero section -->
+  <div class="relative z-20 pt-10" id="home">
+    <!-- ornamen -->
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] -top-10 right-0" data-aos="zoom-in">
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] top-48" data-aos="zoom-in">
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] left-[500px] hidden lg:block" data-aos="zoom-in">
+
+    <div class="mx-0 lg:mx-20 mt-44 lg:mt-20 md:mt-52 md:mb-52 lg:mb-0">
+      <div class="flex justify-between items-center">
+        <!-- kiri -->
+        <div class="lg:w-3/4 pl-10 w-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+          <!-- salam -->
+          <div class="">
+            <p class="font-normal text-black text-md ml-1 md:text-center lg:text-left">HELLOW SCOOTA!</p>
+          </div>
+  
+          <!-- Judul -->
+          <div class="my-2">
+            <h1 class="font-semibold text-4xl md:text-5xl md:text-center lg:text-left lg:text-6xl text-[#0A120A] lg:w-[35rem]">GO AROUND KINTAMANI WITH <span class="text-[#597445]">SCOOTER!</span></h1>
+          </div>
+  
+          <!-- button -->
+          <div class="cursor-pointer bg-[#729762] w-60 py-3 px-2 text-center rounded-full mt-4 flex justify-center items-center md:mx-auto lg:mx-0 hover:bg-[#597445] hover:scale-[0.95] ease-in-out transition-all">
+            <a href="#product" class="font-medium uppercase text-white">find your scooter</a>
+            <i class="fa-solid fa-arrow-right ml-5 text-white"></i>
+          </div>
+  
+        </div>
+  
+        <!-- kanan -->
+         <div class="lg:w-3/5 lg:block hidden" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <img src="./assets/img/landing/hero.png" alt="" class="w-full lg:-mt-5">
+         </div>
+      </div>
+    </div>
+  </div>
+  <!-- end hero section -->
+
+  <!-- about -->
+   <section class="relative z-20 pt-4" id="about">
+    <!-- ornamen -->
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] top-20 left-0 lg:hidden" data-aos="zoom-in">
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] top-48 right-0 lg:right-20 lg:top-60" data-aos="zoom-in">
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="hidden absolute -z-20 w-[100px] bottom-14 right-96 lg:block" data-aos="zoom-in">
+
+      <div class="mx-0 mt-32 lg:mx-20 lg:mt-32 md:mt-20 md:mb-28 lg:mb-0">
+        <div class="flex justify-between items-center">
+          <!-- kiri -->
+          <div class="hidden w-[50%] lg:block" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <img src="https://plus.unsplash.com/premium_photo-1670002504998-bcb28469d09b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-full rounded-lg">
+          </div>
+  
+          <!-- kanan -->
+           <div class="w-full mx-5 lg:w-[40%]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="w-full">
+              <!-- salam -->
+              <div class="">
+                <p class="font-semibold text-center text-[#0A120A] text-2xl md:text-center lg:text-left lg:font-bold">ABOUT</p>
+              </div>
+      
+              <!-- Judul -->
+              <div class="">
+                <h5 class="font-light text-xl text-center md:text-center lg:text-left lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem temporibus totam quo, odit sint repudiandae culpa iure quas et laudantium exercitationem delectus sequi aspernatur? Reiciendis asperiores molestias voluptas sequi. Voluptas sapiente sed maiores asperiores, dolor est dolorem eligendi velit?s</h5>
+              </div>  
+            </div>
+           </div>
+        </div>
+
+      </div>
+   </section>
+  <!-- end about -->
+
+  <!-- location -->
+  <section class="relative z-20 pt-4" id="location">
+    <!-- ornamen -->
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] top-20 left-0 lg:hidden" data-aos="zoom-in">
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="absolute -z-20 w-[100px] top-48 right-0 lg:left-0 lg:top-32" data-aos="zoom-in">
+    <img src="./assets/img/landing/ornamen2.png" alt="" class="hidden absolute -z-20 w-[100px] bottom-14 left-96 lg:block" data-aos="zoom-in">
+
+      <div class="mx-0 mt-32 lg:mx-20 lg:mt-32 md:mt-20 md:mb-28 lg:mb-0">
+        <div class="flex justify-between items-center">
+          <!-- kiri -->
+          <div class="w-full mx-5 lg:w-[40%]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+           <div class="w-full">
+             <!-- salam -->
+             <div class="">
+               <p class="font-semibold text-center text-[#0A120A] text-3xl md:text-center lg:text-left lg:font-bold mb-3">Let's Check Location</p>
+             </div>
+     
+             <!-- Judul -->
+             <div class="">
+               <h5 class="font-light text-xl text-center md:text-center lg:text-left lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem temporibus totam quo, odit sint repudiandae culpa iure quas et laudantium exercitationem delectus sequi aspernatur? Reiciendis asperiores molestias voluptas sequi. Voluptas sapiente sed maiores asperiores, dolor est dolorem eligendi velit?s</h5>
+             </div> 
+             
+             <!-- button -->
+            <div class="cursor-pointer bg-[#729762] w-48 py-2 px-2 text-center rounded-full mt-4 flex justify-center items-center mx-auto lg:mx-0 hover:bg-[#597445] hover:scale-[0.95] ease-in-out transition-all">
+              <a href="detailLocation.html" class="font-medium uppercase text-white">Let's Check</a>
+              <i class="fa-solid fa-arrow-right ml-5 text-white"></i>
+            </div>
+           </div>
+          </div>
+          
+          <!-- kanan -->
+          <div class="hidden w-[40%] lg:block" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <img src="./assets/img/landing/Location.svg" alt="" class="w-full rounded-xl">
+          </div>
+        </div>
+
+      </div>
+  </section>
+  <!-- end location -->
+
+  <!--  Product -->
+  <section class="relative z-20 pt-8" id="product">
+      <!-- ornamen -->
+      <img src="./assets/img/landing/panahAtas.png" alt="" class="absolute top-40 -z-10 -left-[30rem]" data-aos="zoom-in">
+      <img src="./assets/img/landing/panahBawah.png" alt="" class="absolute top-48 -z-10 -right-[30rem] -rotate-90" data-aos="zoom-in">
+
+      <h1 class="pt-24 text-center text-4xl font-semibold text-[#0A120A]" data-aos="zoom-in" data-aos-delay="300">Scooter</h1>
+      <p class="text-lg font-reguler text-center mt-3 text-gray-400 mb-10 italic" data-aos="zoom-in" data-aos-delay="300">Below are our most popular and most frequently rented products.</p>
+
+      <div class="flex flex-wrap justify-center items-center mx-auto">
+          <!-- Card 1 -->
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-3 hover:scale-[1.05] ease-in-out transition-all" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
+            <a href="#">
+                <img class="p-1 pt-3 mx-auto rounded-t-lg" src="./assets/img/scooter/Hover-1 Alpha e-Scooter.png" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900">Hover-1 Alpha e-Scooter</h5>
+                </a>
+                <div class="flex items-center mt-2.5 mb-5">
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">4.5</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-3xl font-bold text-gray-900">Rp. 20.000</span>
+                  <a href="detail1.html" class="text-white bg-[#729762] hover:bg-[#597445] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Rental Now</a>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-3 hover:scale-[1.05] ease-in-out transition-all" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310" data-aos-delay="302">
+            <a href="#">
+                <img class="p-1 pt-3 mx-auto rounded-t-lg" src="./assets/img/scooter/Macwheel e-Scooter.png" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900">Macwheel e-Scooter</h5>
+                </a>
+                <div class="flex items-center mt-2.5 mb-5">
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">4.3</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900">Rp. 20.000</span>
+                    <a href="detail2.html" class="text-white bg-[#729762] hover:bg-[#597445] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Rental Now</a>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-3 hover:scale-[1.05] ease-in-out transition-all" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310" data-aos-delay="303">
+            <a href="#">
+                <img class="p-1 pt-3 mx-auto rounded-t-lg" src="./assets/img/scooter/Sealup e-Scooter.png" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900">Sealup e-Scooter</h5>
+                </a>
+                <div class="flex items-center mt-2.5 mb-5">
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">4.8</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900">Rp. 20.000</span>
+                    <a href="detail3.html" class="text-white bg-[#729762] hover:bg-[#597445] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Rental Now</a>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-3 hover:scale-[1.05] ease-in-out transition-all" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310" data-aos-delay="304">
+            <a href="#">
+                <img class="p-1 pt-3 mx-auto rounded-t-lg" src="./assets/img/scooter/iSinwheel e-Scooter.png" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900">iSinwheel e-Scootert</h5>
+                </a>
+                <div class="flex items-center mt-2.5 mb-5">
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">4.4</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900">Rp. 20.000</span>
+                    <a href="detail4.html" class="text-white bg-[#729762] hover:bg-[#597445] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Rental Now</a>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-3 hover:scale-[1.05] ease-in-out transition-all" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310" data-aos-delay="305">
+            <a href="#">
+                <img class="p-1 pt-3 mx-auto rounded-t-lg" src="./assets/img/scooter/OKAI e-Scooter.png" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900">OKAI e-Scooter</h5>
+                </a>
+                <div class="flex items-center mt-2.5 mb-5">
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">4.7</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900">Rp. 20.000</span>
+                    <a href="detail5.html" class="text-white bg-[#729762] hover:bg-[#597445] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Rental Now</a>
+                </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow m-3 hover:scale-[1.05] ease-in-out transition-all" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310" data-aos-delay="306">
+            <a href="#">
+                <img class="p-1 pt-3 mx-auto rounded-t-lg" src="./assets/img/scooter/Segway Ninebot e-Scooter.png" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900">Segway Ninebot e-Scooter</h5>
+                </a>
+                <div class="flex items-center mt-2.5 mb-5">
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">4.5</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-3xl font-bold text-gray-900">Rp. 20.000</span>
+                    <a href="detail6.html" class="text-white bg-[#729762] hover:bg-[#597445] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Rental Now</a>
+                </div>
+            </div>
+          </div>
+
+      </div>
+  </section>
+  <!-- End Product -->
+
+  <!-- review -->
+  <div class="mx-3 mt-32 mb-10 lg:mx-0 lg:mt-56 md:mt-20" data-aos="fade-up" data-aos-duration="1000">
+    <h1 class="text-center font-semibold text-4xl text-[#0A120A]">Testimonial</h1>
+    <p class="text-lg font-reguler text-center mt-3 text-gray-400 italic mx-3 md:mx-3">Look at reviews or comments from people who have tried our scooter rental service.</p>
+    
+    <section class="splide mt-14" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list ">
+          <li class="splide__slide">
+            <div class="carousel-item active">
+              <figure class="lg:max-w-screen-xl md:max-w-screen-lg max-w-screen-md mx-auto text-center border-b-2 border-gray-300 rounded-lg p-2 md:p-5">
+                  <svg class="w-10 h-10 mx-auto mb-3 text-[#729762]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                      <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                  </svg>
+                  <blockquote>
+                      <p class="text-2xl md:text-3xl lg:text-4xl italic mx-3 md:mx-0 font-medium text-gray-900">"The coolest scooter rental place. There are many location points, and of course each location has a good view. Basically a recommendation 👍"</p>
+                  </blockquote>
+                  <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                      <img class="w-6 h-6 rounded-full" src="./assets/img/landing/boring.jpeg" alt="profile picture">
+                      <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+                          <cite class="pe-3 font-medium text-gray-900">Draviinn</cite>
+                          <cite class="ps-3 text-sm text-gray-500">Customer</cite>
+                      </div>
+                  </figcaption>
+              </figure>
+            </div>
+          </li>
+  
+          <li class="splide__slide">
+            <div class="carousel-item active">
+              <figure class="lg:max-w-screen-xl md:max-w-screen-lg max-w-screen-md mx-auto text-center border-b-2 border-gray-300 rounded-lg p-2 md:p-5">
+                  <svg class="w-10 h-10 mx-auto mb-3 text-[#729762]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                      <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                  </svg>
+                  <blockquote>
+                      <p class="text-2xl md:text-3xl lg:text-4xl italic mx-3 md:mx-0 font-medium text-gray-900">"Cheap scooter rental place and the paths provided are unique, where the paths have beautiful views 😍"</p>
+                  </blockquote>
+                  <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                      <img class="w-6 h-6 rounded-full" src="./assets/img/landing/bintang_benggong.jpg" alt="profile picture">
+                      <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+                          <cite class="pe-3 font-medium text-gray-900">Patrik</cite>
+                          <cite class="ps-3 text-sm text-gray-500">Customer</cite>
+                      </div>
+                  </figcaption>
+              </figure>
+            </div>
+          </li>
+  
+          <li class="splide__slide">
+            <div class="carousel-item active">
+              <figure class="lg:max-w-screen-xl md:max-w-screen-lg max-w-screen-md mx-auto text-center border-b-2 border-gray-300 rounded-lg p-2 md:p-5">
+                  <svg class="w-10 h-10 mx-auto mb-3 text-[#729762]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                      <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                  </svg>
+                  <blockquote>
+                      <p class="text-2xl md:text-3xl lg:text-4xl italic mx-3 md:mx-0 font-medium text-gray-900">"It is indeed suitable as a holiday destination with family or going out as a couple, the place is nice, cheap and of course the natural beauty on offer."</p>
+                  </blockquote>
+                  <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                      <img class="w-6 h-6 rounded-full" src="./assets/img/landing/Franco cat mlbb legend.jpg" alt="profile picture">
+                      <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+                          <cite class="pe-3 font-medium text-gray-900">Nex</cite>
+                          <cite class="ps-3 text-sm text-gray-500">Customer</cite>
+                      </div>
+                  </figcaption>
+              </figure>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <!-- end review -->
+
+  <!-- footer -->
+  <footer class="p-4 bg-[#597445] sm:p-6" data-aos="fade-up" data-aos-duration="900">
+    <div class="mx-auto max-w-screen-xl">
+        <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <div class="flex items-center">
+                    <img src="./assets/img/favivon/logo.png" class="mr-3 h-32" alt="Logo" />
+                    <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap"><span class="font-bold text-[#597445]">KINTA</span><span class="font-medium text-orange-300">Scooter</span></span> -->
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-1">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase">Navigation</h2>
+                    <ul class="text-white font-light">
+                        <li class="my-1">
+                            <a href="#home" class="hover:underline">Home</a>
+                        </li>
+                        <li class="my-1">
+                            <a href="#about" class="hover:underline">About</a>
+                        </li>
+                        <li class="my-1">
+                            <a href="#location" class="hover:underline">Location</a>
+                        </li>
+                        <li class="my-1">
+                            <a href="#product" class="hover:underline">Scooter</a>
+                        </li>
+                        <li class="my-1">
+                            <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="hover:underline">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-white sm:text-center ">© 2024 KintaScooter. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-6 sm:justify-center items-center sm:mt-0">
+                <a href="#" class="text-white hover:scale-[0.90]">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:scale-[0.90]">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:scale-[0.90]">
+                    <i class="fa-brands fa-facebook text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!-- Modal form -->
+  <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-4xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t bg-[#597445]">
+                <h3 class="text-lg font-semibold text-white">
+                    Contact Email
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <form class="p-4 md:p-5">
+              <div class="mb-5">
+                  <label for="email" class="block text-md font-medium text-gray-900">Your email</label>
+                  <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#729762] focus:border-[#729762] block w-full p-2.5" placeholder="name@gmail.com" required>
+              </div>
+
+              <div class="my-5">
+                  <label for="subject" class="block text-md font-medium text-gray-900">Subject</label>
+                  <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-[#729762] focus:border-[#729762]" placeholder="Let us know how we can help you" required>
+              </div>
+              
+              <div class="my-5">
+                  <label for="message" class="block text-md font-medium text-gray-900">Your message</label>
+                  <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-[#729762] focus:border-[#729762]" placeholder="Leave a comment..."></textarea>
+              </div>
+
+              <button type="button" onclick="SendMail()" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#729762] hover:bg-[#597445] hover:scale-[0.95] ease-in-out transition-all sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none">Send message</button>
+          </form>
+        </div>
+    </div>
+  </div> 
+
+  <!-- csn js flowbite -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+
+  <!-- js native -->
+  <script>
+    function SendMail() {
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=kesariishantii27@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0AFrom:%20${encodeURIComponent(email)}`;
+
+        window.open(mailtoLink, '_blank');
+    }
+
+  </script>
+
+<!-- slide -->
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide('.splide', {
+      type: 'loop',
+      focus: 'center',
+      autoplay: true,
+      interval: 3000,
+      pagination: false,
+      arrows : false,
+      mediaQuery: 'min',
+      breakpoints: {
+        640: {
+          heightRatio : 0.7,
+
+        },
+
+        780: {
+          heightRatio : 0.5,
+        },
+
+        1024: {
+          heightRatio : 0.3,
+        },
+      },
+    }).mount();
+  });
+  </script>
+
+<!-- aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

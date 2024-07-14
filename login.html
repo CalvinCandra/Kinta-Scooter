@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- link flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+
+  <!-- link google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- fontawsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- animasi css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <title>Sign In</title>
+</head>
+
+<body style="font-family: 'Poppins';">
+    
+    <section class="bg-[#f5f6fa] h-screen md:h-full lg:h-screen flex justify-center items-center p-10 relative overflow-x-hidden">
+
+        <!-- ornamen bagian bawah -->
+        <img src="../assets/img/auth/kiri_bawah2.png" alt="" class="absolute bottom-0 left-0 md:block hidden z-30 w-[600px] animate__animated animate__fadeInLeft" loading="lazy">
+        <img src="../assets/img/auth/kiri_bawah1.png" alt="" class="absolute bottom-0 left-0 md:block hidden w-[200px] animate__animated animate__fadeInLeft" loading="lazy">
+
+        <!-- ornamen bagian atas -->
+        <img src="../assets/img/auth/kanan_atas2.png" alt="" class="absolute top-0 right-0 md:block hidden z-30 w-[600px] animate__animated animate__fadeInRight" loading="lazy">
+        <img src="../assets/img/auth/kanan_atas1.png" alt="" class="absolute top-0 right-0 md:block hidden w-[200px] animate__animated animate__fadeInRight" loading="lazy">
+
+
+        <!-- kotak login -->
+        <div class="lg:flex w-[90%] md:w-[60%] lg:w-[70%] lg:p-0 md:p-2 lg:my-0 rounded-lg bg-white shadow shadow-gray-400 justify-between relative z-50 animate__animated animate__fadeIn animate__delay-1s">
+            <!-- bagian kiri -->
+             <div class="hidden md:inline lg:w-[50%] lg:flex relative">
+                <img src="../assets/img/auth/login.svg" alt="Gambar Login" class="lg:w-full md:w-80 mx-auto lg:p-14">
+                <img src="../assets/img/auth/kiri_atas1.png" alt="" class="absolute top-0 left-0 md:block hidden w-[200px]" loading="lazy">
+             </div>
+
+             <!-- kanan -->
+             <div class="w-full lg:w-[55%] p-5 flex flex-col justify-center relative">
+                <!-- ornamen -->
+                <img src="../assets/img/auth/kanan_bawah2.png" alt="" class="absolute bottom-0 right-0 md:block hidden w-[250px] -z-50" loading="lazy">
+
+                <h1 class="text-[#0A120A] text-3xl font-bold mb-10 md:text-center lg:text-left">Sign in</h1>
+
+                <form class="space-y-4 md:space-y-6 flex flex-col justify-center" action="#">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
+                        <div class="flex justify-center items-center border-gray-300 border rounded-lg px-2 focus-within:ring-2 focus-within:ring-[#729762]">
+                            <i class="fa-solid fa-envelope mx-2"></i>
+                            <input type="email" name="email" id="email" class="bg-gray-50 text-gray-900 outline-none border-none block w-full p-2.5 focus:ring-0" placeholder="name@company.com" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your Password</label>
+                        <div class="flex justify-center items-center border-gray-300 border rounded-lg px-2 focus-within:ring-2 focus-within:ring-[#729762]">
+                            <i class="fa-solid fa-lock mx-2"></i>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="border-none bg-gray-50 text-gray-900 outline-none block w-full p-2.5 focus:ring-0">
+                        </div>
+                    </div>
+
+                    <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Forgot password?</a>
+
+                    <a href="../pages/landing.html" class="w-full text-white bg-[#729762] hover:scale-[0.98] font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all ease-in-out">Sign in</a>
+                    
+                    <p class="text-sm font-light text-gray-500 text-center">
+                        Don’t have an account yet? <a href="../pages/register.html" class="font-medium text-blue-600 hover:underline">Sign up</a>
+                    </p>
+                </form>
+
+             </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- csn js flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+
+    <!-- link js native -->
+    <script src="../assets/js/auth.html"></script>
+</body>
+</html>
