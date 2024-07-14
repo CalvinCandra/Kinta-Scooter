@@ -31,17 +31,17 @@
 
   <!-- navbar -->
   <nav class="bg-white fixed w-full z-50 top-0 start-0 border-b border-gray-200 " data-aos="zoom-in-down">
-    <div class="max-w-screen-xl lg:mx-16 flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
       <!-- logo -->
       <div class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./assets/img/favivon/logo.png" class="h-8" alt="Flowbite Logo">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap"><span class="font-bold text-[#597445]">KINTA</span><span class="font-medium text-orange-300">Scooter</span></span>
+          <span class="hidden md:inline self-center text-2xl font-semibold whitespace-nowrap"><span class="font-bold text-[#597445]">KINTA</span><span class="font-medium text-orange-300">Scooter</span></span>
       </div>
 
       <!-- bagian kanan -->
       <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
-        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
+        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="hidden md:inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
           <img src="./assets/img/landing/boring.jpeg" alt="" class="w-7 h-7 rounded-full me-3">
           Draviinn
         </button>
@@ -87,7 +87,32 @@
           <li>
             <a href="index.html#product" class="block py-2 px-3 text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#597445] md:p-0 hover:scale-[0.95] hover:underline ease-in-out transition-all">Product</a>
           </li>
+          <li>
+            <button type="button" data-dropdown-toggle="language-dropdown-menu1" class="inline-flex md:hidden items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
+              <img src="./assets/img/landing/boring.jpeg" alt="" class="w-7 h-7 rounded-full me-3">
+              Draviinn
+            </button>
+          </li>
         </ul>
+        <!-- Dropdown -->
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow" id="language-dropdown-menu1">
+          <ul class="py-2 font-medium" role="none">
+            <li>
+              <a href="dashboard.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                <div class="inline-flex items-center">
+                  Check My Scooter
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                <div class="inline-flex items-center">
+                  Logout
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -97,11 +122,15 @@
    <div class="mx-0 mt-32 lg:mx-20 lg:mt-32 md:mt-20 md:mb-28 lg:mb-0">
 
       <!-- Card 1 -->
-      <div class="rounded-lg shadow shadow-[#597445] p-3 my-32 mx-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
+      <div class="rounded-lg shadow shadow-[#597445] p-3 my-10 md:my-32 mx-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
         <div class="flex flex-col lg:flex-row justify-between items-center">
           <!-- map -->
-          <div class="text-center">
+          <div class="hidden md:block text-center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31591.970524104054!2d115.38543059999998!3d-8.203123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f17b71ad12e1%3A0xa9a5c68c2810f1c9!2sPinggan%2C%20Kintamani%2C%20Bangli%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1720797155873!5m2!1sen!2sid" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="block md:hidden text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31591.970524104054!2d115.38543059999998!3d-8.203123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f17b71ad12e1%3A0xa9a5c68c2810f1c9!2sPinggan%2C%20Kintamani%2C%20Bangli%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1720797155873!5m2!1sen!2sid" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <!-- konten -->
@@ -162,11 +191,15 @@
       </div>
       
       <!-- Card 2 -->
-      <div class="rounded-lg shadow shadow-[#597445] p-3 my-32 mx-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
+      <div class="rounded-lg shadow shadow-[#597445] p-3 my-10 md:my-32 mx-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
         <div class="flex flex-col lg:flex-row justify-between items-center">
           <!-- map -->
-          <div class="text-center">
+          <div class="hidden md:block text-center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15792.693108429736!2d115.37374194999998!3d-8.285547499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f5d7449f114b%3A0x8e5f99b9dae1de9c!2sKedisan%2C%20Kintamani%2C%20Bangli%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1720843057481!5m2!1sen!2sid" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="block md:hidden text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15792.693108429736!2d115.37374194999998!3d-8.285547499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f5d7449f114b%3A0x8e5f99b9dae1de9c!2sKedisan%2C%20Kintamani%2C%20Bangli%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1720843057481!5m2!1sen!2sid" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <!-- konten -->
@@ -227,11 +260,15 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="rounded-lg shadow shadow-[#597445] p-3 mt-32 mx-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
+      <div class="rounded-lg shadow shadow-[#597445] p-3 my-10 md:my-32 mx-3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="310">
         <div class="flex flex-col lg:flex-row justify-between items-center">
           <!-- map -->
-          <div class="text-center">
+          <div class="hidden md:block text-center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.530818630053!2d115.39776510000002!3d-8.2498414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f76e6f74d125%3A0xeab304190afe8510!2sToya%20bungkah!5e0!3m2!1sen!2sid!4v1720844840686!5m2!1sen!2sid" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="block md:hidden text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.530818630053!2d115.39776510000002!3d-8.2498414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f76e6f74d125%3A0xeab304190afe8510!2sToya%20bungkah!5e0!3m2!1sen!2sid!4v1720844840686!5m2!1sen!2sid" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <!-- konten -->
