@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Street -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <title>Maps</title>
+
+    <!-- favicon -->
+   <link rel="shortcut icon" href="../assets/img/favivon/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div id="map" style="width:100%; height:100vh"></div>
+
+    <script type="text/javascript">
+        const mapview = L.map('map');
+        const osmUrl ='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const osmAttr ='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+        const osmOption = L.tileLayer(osmUrl, { minZoom: 8, maxZoom: 50, attribution: osmAttr });
+        mapview.scrollWheelZoom.enable();
+        mapview.setView(new L.LatLng(-8.280383, 115.3854923), 15);
+        mapview.addLayer(osmOption);
+        addMarker(-8.280383, 115.3854923, "<center>Your Here</center> <br> <button onclick='getRoute(-8.280383, 115.3854923, -8.2499548, 115.3973542)'>Check Route</button>");
+
+        function getRoute(latform, longform, latto, longto){
+            L.Routing.control({
+            waypoints: [
+                L.latLng(latform, longform),
+                L.latLng(latto, longto)
+            ]
+            }).addTo(mapview);
+        }
+
+        function addMarker(lat, long, info){
+            var marker = L.marker([lat,long]).addTo(mapview);
+            marker.bindPopup(info);
+        };
+    </script>
+</body>
+</html>
